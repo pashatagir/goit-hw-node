@@ -1,13 +1,31 @@
-# goit-hw-node
+## GoIT Node.js Course Template Homework
 
-1. Read all contacts from contacts.json
-   https://monosnap.com/file/lihvu9oJ6fubEkdXrxF7pWkZGmsOy7
+Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
+Форк створить репозиторій на вашому http://github.com
 
-2.Read one contact by identificator
-https://monosnap.com/file/8MgSNzfPJtUyqoZnjbGNuGeKNXJlYx
+Додайте ментора до колаборації
 
-3.Create and add new contact in contacts.json
-https://monosnap.com/file/HHCUQEOXL7XVo5cCMdJNCMtAPP2nop
+Для кожної домашньої роботи створюйте свою гілку.
 
-4.Remove contact by identificator from contacts.json
-https://monosnap.com/file/ZNetXuFRttvAygXCxI96GihwA2Nrub
+- hw02
+- hw03
+- hw04
+- hw05
+- hw06
+
+Кожна нова гілка для др повинна робитися з master
+
+Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+
+Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
+Після виправлення знову додайте ментора на рев'ю коду.
+
+- При здачі домашньої роботи є посилання на PR
+- JS-код чистий та зрозумілий, для форматування використовується Prettier
+
+### Команди:
+
+- `npm start` &mdash; старт сервера в режимі production
+- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
+- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
+- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
