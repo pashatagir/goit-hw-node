@@ -26,6 +26,9 @@
 ### Команди:
 
 - `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
+- `npm run dev` &mdash; старт сервера в режимі розробки (development)
 - `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
 - `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+
+DB_HOST=mongodb+srv://pashtetik:123pashtetik987@cluster1.0yggomk.mongodb.net/contacts_reader?retryWrites=true&w=majority
+PORT=3000
