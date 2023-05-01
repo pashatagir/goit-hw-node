@@ -1,6 +1,6 @@
 const express = require("express");
 const ctrl = require("../../controllers");
-const { schemas } = require("../../models/contact");
+const { schemas } = require("../../models");
 const { validateBody, isValidId } = require("../../middlewares");
 const router = express.Router();
 
@@ -26,4 +26,4 @@ router.patch(
   ctrl.updateFavorite
 );
 
-module.exports = router;
+module.exports = { router };
