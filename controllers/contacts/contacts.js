@@ -1,9 +1,9 @@
-const { Contact } = require("../../models");
+const { Contact } = require('../../models');
 
-const { ctrlWrapper } = require("../../helpers");
+const { ctrlWrapper } = require('../../helpers');
 
 const listContacts = async (req, res) => {
-  const result = await Contact.find({}, "-createdAt -updatedAt");
+  const result = await Contact.find({}, '-createdAt -updatedAt');
   res.json(result);
 };
 
@@ -12,7 +12,7 @@ const getContactById = async (req, res) => {
   const result = await Contact.findById(contactId);
   if (!result) {
     return res.status(404).json({
-      message: "Not found",
+      message: 'Not found',
     });
   }
   res.json(result);
@@ -28,10 +28,10 @@ const removeContact = async (req, res) => {
   const result = await Contact.findByIdAndRemove({ _id: contactId });
   if (!result) {
     return res.status(404).json({
-      message: "Not found",
+      message: 'Not found',
     });
   }
-  res.json({ message: "contact deleted" });
+  res.json({ message: 'contact deleted' });
 };
 
 const updateContact = async (req, res) => {
@@ -41,7 +41,7 @@ const updateContact = async (req, res) => {
   });
   if (!result) {
     return res.status(404).json({
-      message: "Not found",
+      message: 'Not found',
     });
   }
   res.json(result);
@@ -54,7 +54,7 @@ const updateFavorite = async (req, res) => {
   });
   if (!result) {
     return res.status(404).json({
-      message: "Not found",
+      message: 'Not found',
     });
   }
   res.json(result);
