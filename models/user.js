@@ -48,9 +48,9 @@ const userSchema = new Schema(
       default: "starter",
       validate: {
         validator: (v) => SUBSCRIPTION.includes(v),
-        message: (props) => `${props.value} is not a valid subscription!`,
+        message: (props) =>
+          `'${props.value}' is not a valid type! Choose one of ${SUBSCRIPTION}`,
       },
-      required: [true, "Set password for user"],
     },
   },
   { versionKey: false, timestamps: true }

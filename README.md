@@ -32,3 +32,4 @@
 
 DB_HOST=mongodb+srv://pashtetik:123pashtetik987@cluster1.0yggomk.mongodb.net/contacts_reader?retryWrites=true&w=majority
 PORT=3000
+SECRET_KEY=DT3d7Nowo7
