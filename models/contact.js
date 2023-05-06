@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 const { handleMongooseError } = require("../helpers");
-const Joi = require("joi"); //module that helps with validation of data types received during a query
+const Joi = require("joi");
 
 const contactSchema = new Schema(
   {
@@ -8,6 +8,11 @@ const contactSchema = new Schema(
     email: { type: String },
     phone: { type: String },
     favorite: { type: Boolean, default: false },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
