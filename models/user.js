@@ -52,6 +52,7 @@ const userSchema = new Schema(
           `'${props.value}' is not a valid type! Choose one of ${SUBSCRIPTION}`,
       },
     },
+    avatarURL: { type: String, required: true },
   },
   { versionKey: false, timestamps: true }
 );
