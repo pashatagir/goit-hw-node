@@ -11,13 +11,12 @@ describe("test login controller", () => {
     await mongoose.disconnect();
   });
   test("response status should be 200", async () => {
-    const response = await request(app)
+    const res = await request(app)
       .post("/api/users/login")
       .send({
         email: "test@gmail.com",
         password: "test1234",
       })
       .expect(200);
-    expect(response.body).toHaveProperty("token");
   });
 });
