@@ -8,7 +8,15 @@ router.post(
   "/register",
   validateBody(authSchemas.registerSchema),
   ctrlUser.register
-); //signup
+);
+
+router.get("/verify/:verificationToken", ctrlUser.verifyEmail);
+
+router.post(
+  "/verify",
+  validateBody(authSchemas.verifyEmailSchema),
+  ctrlUser.resendVerifyEmail
+);
 
 router.post("/login", validateBody(authSchemas.loginSchema), ctrlUser.login);
 
