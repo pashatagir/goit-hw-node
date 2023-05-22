@@ -1,3 +1,4 @@
 const ctrlContact = require("../controllers/contacts");
 const ctrlUser = require("../controllers/users");
-module.exports = { ctrlContact, ctrlUser };
+const ctrlEmail = require("../controllers/services");
+module.exports = { ctrlContact, ctrlUser, ctrlEmail };

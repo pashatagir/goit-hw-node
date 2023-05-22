@@ -2,7 +2,7 @@ const express = require("express");
 const { authSchemas } = require("../../models");
 const router = express.Router();
 const { validateBody, auth, upload } = require("../../middlewares");
-const { ctrlUser } = require("../../controllers");
+const { ctrlUser, ctrlEmail } = require("../../controllers");
 
 router.post(
   "/register",
@@ -10,12 +10,12 @@ router.post(
   ctrlUser.register
 );
 
-router.get("/verify/:verificationToken", ctrlUser.verifyEmail);
+router.get("/verify/:verificationToken", ctrlEmail.verifyEmail);
 
 router.post(
   "/verify",
   validateBody(authSchemas.verifyEmailSchema),
-  ctrlUser.resendVerifyEmail
+  ctrlEmail.resendVerifyEmail
 );
 
 router.post("/login", validateBody(authSchemas.loginSchema), ctrlUser.login);
